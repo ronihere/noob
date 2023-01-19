@@ -28,10 +28,10 @@ def mobile(request):
  return render(request, 'app/mobile.html')
 
 def login(request):
- return render(request, 'app/login.html')
+ return render(request, 'authenticate/login.html')
 
 def customerregistration(request):
- return render(request, 'app/customerregistration.html')
+ return render(request, 'authenticate/customerregistration.html')
 
 def checkout(request):
  return render(request, 'app/checkout.html')
