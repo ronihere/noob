@@ -44,17 +44,21 @@ def checkout(request):
 
 
 def hood(request):
-    return render(request,'app/hood.html')
+    response = requests.get('http://43.206.240.172:8000/restapi/prod4-list/').json()
+    return render(request,'app/hood.html',{'response':response})
+    
 
 def glass(request):
-    return render(request,'app/glass.html')
+    response = requests.get('http://43.206.240.172:8000/restapi/prod3-list/').json()
+    return render(request,'app/glass.html',{'response':response})
 
 def shoe(request):
     response = requests.get('http://43.206.240.172:8000/restapi/prod1-list/').json()
     return render(request,'app/shoe.html',{'response':response})
 
 def cap(request):
-    return render(request,'app/cap.html')
+    response = requests.get('http://43.206.240.172:8000/restapi/prod2-list/').json()
+    return render(request,'app/anarkali.html',{'response':response})
 
 def custom(request):
     return render(request,'app/Finalhtml.html')
