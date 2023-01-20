@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django.contrib.sites',
     
-    'app',
+    'app.apps.AppConfig',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
@@ -136,7 +136,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT=os.path.join(BASE_DIR,'media')
+MEDIA_URL='/media/'
 SITE_ID = 1
+
 
 LOGIN_REDIRECT_URL = '/'
 
@@ -155,3 +158,10 @@ SOCIALACCOUNT_PROVIDERS = {
         
     }
 }
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID='AKIAW4IENJ6ZOJZCIF5G'
+AWS_SECRET_ACCESS_KEY= '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'
+AWS_STORAGE_BUCKET_NAME='blackhawks3'
+AWS_QUERYSTRING_AUTH = False

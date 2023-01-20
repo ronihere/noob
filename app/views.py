@@ -1,7 +1,11 @@
 from django.shortcuts import render
+from .models import DealsOfTheDay
 
 def home(request):
- return render(request, 'app/home.html')
+    products = DealsOfTheDay.objects.all()
+    context = {'products':products}
+    # print(products)
+    return render(request,'app/home.html',context)
 
 def product_detail(request):
  return render(request, 'app/productdetail.html')
