@@ -12,6 +12,6 @@ urlpatterns = [
     path('changepassword/', views.change_password, name='changepassword'),
     path('mobile/', views.mobile, name='mobile'),
     # path('login/', views.login, name='login'),
-    path('registration/', views.customerregistration, name='customerregistration'),
+    # path('registration/', views.customerregistration, name='customerregistration'),
     path('checkout/', views.checkout, name='checkout'),
 ]
