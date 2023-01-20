@@ -62,7 +62,7 @@ integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6
                                   <div class="centered">
                                       <h5 style="color: black">gajab topibaaz admi hain</h5>
                                   </div>
-                                  <a href="#" class="bottom-centered btn btn-secondary">Go somewhere</a>
+                                  <a href="#" class="btn btn-secondary">Go somewhere</a>
                               </div>
                           </div>
                           <div class="col-xs-3 col-sm-3 col-md-3">
@@ -189,5 +189,16 @@ integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6
  </div>
 </div>
 <!-- End 2nd Product Slider -->
+<script type="text/javascript">
+  (function(d, m){
+      var kommunicateSettings = 
+          {"appId":"339e39fd70b917250fd683ad63dc1701e","popupWidget":true,"automaticChatOpenOnNavigation":true};
+      var s = document.createElement("script"); s.type = "text/javascript"; s.async = true;
+      s.src = "https://widget.kommunicate.io/v2/kommunicate.app";
+      var h = document.getElementsByTagName("head")[0]; h.appendChild(s);
+      window.kommunicate = m; m._globals = kommunicateSettings;
+  })(document, window.kommunicate || {});
+/* NOTE : Use web server to view HTML files as real-time update will not work if you directly open the HTML file in the browser. */
+</script>
 {% endblock main-content %}
 
