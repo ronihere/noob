@@ -2,6 +2,7 @@
 {% load static %}
 <html lang="en">
   <head>
+    
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,8 +17,7 @@
     <!--Owl Carousel CSS-->
     <link rel="stylesheet" href="{% static 'app/css/owl.carousel.min.css' %}">
 
-    <!--FontAwesome CSS-->
-    {% comment %} <link rel="stylesheet" href="{% static 'app/css/all.min.css' %}"> {% endcomment %}
+    
 
     <!--Custom CSS-->
     <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
@@ -32,7 +32,7 @@
      <div class="container">
        <a class="navbar-brand" href="/">
 
-        <img src="{% static 'app/images/logo.jpg' %}" alt="Bootstrap" width="30" height="24">
+        <img src="{% static 'app/images/customlogo.png' %}" alt="Bootstrap" width="40" height="35">
 
        </a></a>
        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,20 +41,15 @@
        <div class="collapse navbar-collapse" id="navbarSupportedContent">
          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
            <li class="nav-item">
-             <a class="nav-link active" aria-current="page" href="/">Home</a>
+             <a class="nav-link active"style="color: white; font-family: 'Courier New', monospace;" aria-current="page" href="/">Home</a>
            </li>
-           <li class="nav-item dropdown">
-             <a class="nav-link dropdown-toggle text-white" href="#" id="electronicsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="true">
-               Electronics
-             </a>
-             <ul class="dropdown-menu" aria-labelledby="electronicsDropdown">
-               <li><a class="dropdown-item" href="{% url 'mobile' %}">Mobile</a></li>
-               <li><a class="dropdown-item" href="#">Custom</a></li>
-             </ul>
-           </li>
-           <li class="nav-item dropdown">
+           <li class="nav-item">
+            <a class="nav-link active"style="color: white; font-family: 'Courier New', monospace;" aria-current="page" href="custom/">Customize</a>
+          </li>
+          
+           <li class="nav-item dropdown" style="color: white; font-family: 'Courier New', monospace;">
              <a class="nav-link dropdown-toggle text-white" href="#" id="fashionDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-               Fashion
+               Categories
              </a>
              <ul class="dropdown-menu" aria-labelledby="fashionDropdown">
                <li><a class="dropdown-item" href="#">Top Wear</a></li>
@@ -64,12 +59,12 @@
          </ul>
          <form class="d-flex">
            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-           <button class="btn btn-warning" type="submit">BHawks</button>
+           <button class="btn btn-warning" type="submit"> </button>
           
             
           
          </form>
-         <div>
+         <div style="color: white; font-family: 'Courier New', monospace;">
           <ul class="navbar-nav me-auto mb-2 mb-lg-0">
            <li class="nav-item dropdown mx-2">
               <a class="nav-link dropdown-toggle text-white" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -83,7 +78,7 @@
                 <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
                 <li><a class="dropdown-item" href="{% url 'orders' %}">Orders</a></li>
                 <li><a class="dropdown-item" href="{% url 'changepassword' %}">Change Password</a></li>
-                <li><a class="dropdown-item" href="#">Logout</a></li>
+                <li><a class="dropdown-item" href="accounts/logout">Logout</a></li>
                
                 {% endif %}
               </ul>

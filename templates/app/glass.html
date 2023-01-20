@@ -1,11 +1,23 @@
-{% extends 'app/basecontent.html' %}
+{% extends 'app/base.html' %}
+{% block hood %}
 {% load static %}
+<main>
+    <div class="bg-dark">
+        <div class='container my-4'>
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">{% block prodname %}{% endblock %}</strong>
+                    <h5 class="my-1" style="color:white;">{% block proddesc %}{% endblock %}</h5>
+                    <strong class="d-inline-block mb-2 my-4 text-primary">{% block prodprice %}{% endblock %}</strong>
+                    <a href="{% block buynowlink %}{% endblock %}" type="button" class="btn btn-outline-primary stretched-link my-4">Buy Now</a>
+                </div>
+                <div class="col-auto d-none d-lg-block">
+                    <img src="{% block img %}{% endblock %}" class="bd-placeholder-img" width="300" height="350">
+                </div>
+            </div>
+        </div>
 
+    </div>
 
-
-{% block prodname %} <h4 class=" display-4 fst-italic">Black Rage Hoodie</h4> {% endblock %}
-{% block proddesc %}Nothing like some good old rage, and what better way to show it then to really wear 
-it on your sleeves? They say kill the rage, we say rep it, celebrate it.{% endblock %}
-{% block prodprice %}<h3>RS: 2000</h3>{% endblock %}
-{% block img %}{% static 'app/images/banner/hood1.jpg' %}{% endblock %}
-{% block buynowlink %} #{% endblock %}
+</main>
+{% endblock hood %}

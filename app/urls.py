@@ -18,4 +18,5 @@ urlpatterns = [
     path('glass/', views.glass, name='glass'),
     path('shoe/', views.shoe, name='shoe'),
     path('cap/', views.cap, name='cap'),
+    path('custom/',views.custom,name='custom'),
 ]

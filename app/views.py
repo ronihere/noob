@@ -50,30 +50,11 @@ def glass(request):
     return render(request,'app/glass.html')
 
 def shoe(request):
-    # http://43.206.240.172:8000/restapi/prod1-list/ 
-    responseObj = requests.get('http://43.206.240.172:8000/restapi/prod1-list/',data={'key': 'value'})
-    # print("response :")
-    # print(responseObj.encoding)
-    response=responseObj.json()
-    dict={}
-    # print(type(response))
-    i=0
-    str_="key"
-    for item in response:
-        dict[str_+str(i)]=item
-        i+=1
-    new_dict = {}
-    for item in dict:
-        temp=[]
-        for val in dict[item]:
-            temp.append(dict[item][val])
-        new_dict[item] = temp
-    print(new_dict)
-        
-    
-    
-    
-    return render(request,'app/shoe.html',{'response':new_dict})
+    response = requests.get('http://43.206.240.172:8000/restapi/prod1-list/').json()
+    return render(request,'app/shoe.html',{'response':response})
 
 def cap(request):
     return render(request,'app/cap.html')
+
+def custom(request):
+    return render(request,'app/Finalhtml.html')

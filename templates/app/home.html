@@ -35,15 +35,7 @@
 
 {% block livesale %}
 <!-- Live Sale Section -->
-{% comment %} <div class="container">
-  <div class="row bg-danger text-center p-5 text-white border-bottom shadow">
-    <h1>SALE IS LIVE NOW</h1>
-    <span>5% Instant Discount on Axis Bank Credit and Debit Card</span>
-    <small class="fw-lighter">Term and Condition Applied (For details visit Bank's official Website)</small>
-  </div>
 
-
-</div> {% endcomment %}
 
 
 
@@ -67,38 +59,35 @@
 
               <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="card" style="width: 18rem;">
-                  <img src="{% static 'app/images/tagline/hood.jpeg' %}" class="card" alt="...">
-                  <div class="centered">
-                    <h5 style="color: black">gajab topibaaz admi hain</h5>
-                  </div>
-                  <a href="/hood/" class="bottom-centered btn btn-secondary">Go somewhere</a>
+                  <img src="https://django-bucket4.s3.ap-south-1.amazonaws.com/app/images/Aesthetic_Shoes.jpg" class="card" alt="...">
+                  
+                  <a href="/shoe/" class="bottom-centered btn btn-secondary" style="color: white; font-family: 'Courier New', monospace;"><b>80 Hazar K juute!</b>
+
+                  </a>
                 </div>
               </div>
               <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="card" style="width: 18rem;">
-                  <img src="{% static 'app/images/tagline/gls.jpeg' %}" class="card" alt="...">
-                  <div class="centered">
-                    <h5>gajab topibaj admi ho!!</h5>
-                  </div>
-                  <a href="/glass/" class="bottom-centered btn btn-secondary">Go somewhere</a>
+                  <img src="https://django-bucket4.s3.ap-south-1.amazonaws.com/app/images/Apparel_600x600.jpg" class="card" alt="...">
+                  <a href="/hood/" class="bottom-centered btn btn-secondary" style="color: white; font-family: 'Courier New', monospace;"><b>Gajab Topibaaz admi hain!</b>
+
+                  </a>
                 </div>
               </div>
               <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="card" id style="width: 18rem;">
-                  <img src="{% static 'app/images/tagline/jute.jpg' %}" class="card" alt="...">
-                  <div class="centered">
-                    <h5></h5>
-                  </div>
-                  <a href="/shoe/" class="bottom-centered btn btn-secondary">Go somewhere</a>
+                  <img src="https://django-bucket4.s3.ap-south-1.amazonaws.com/app/images/2.jpg" class="card" alt="...">
+                  
+                  <a href="/glass/" class="bottom-centered btn btn-secondary" style="color: white; font-family: 'Courier New', monospace;"><b>tenu kala chasma jachda!</b>
+
+                  </a>
                 </div>
               </div>
               <div class="col-xs-3 col-sm-3 col-md-3">
                 <div class="card" style="width: 18rem;">
-                  <img src="{% static 'app/images/tagline/cap.jpeg' %}" class="card" alt="...">
-                  <div class="centered">
-                    <h5>gajab topibaj admi ho!!</h5>
-                  </div>
-                  <a href="/cap/" class="bottom-centered btn btn-secondary">Go somewhere</a>
+                  <img src="https://django-bucket4.s3.ap-south-1.amazonaws.com/app/images/12_600x600.jpg" class="card" alt="...">
+                 
+                  <a href="/cap/" class="bottom-centered btn btn-secondary"style="color: white; font-family: 'Courier New', monospace;"><b>Anarkali Disco chali</b></a>
                 </div>
               </div>
             </div>
@@ -135,7 +124,7 @@
       {% block main-content %}
       <!-- 1st Product Slider -->
       <div class="m-3">
-        <h3 style="color:white;">ShoppingX Deals of The Day</h3>
+        <h3 style="color: white; font-family: 'Courier New', monospace;">Black-Hawks X Deals of The Day</h3>
         <!-- Slider 1 -->
         <div class="owl-carousel" id="slider1">
 
@@ -144,9 +133,9 @@
           {%for item in products %}
 
 
-          <div class="item"><img src="{{item.image.url}}" alt="" height="200px"><span class="fw-bold"
-              style="color:white;">{{item.prod_name}}</span><br><span class="fs-5"
-              style="color:white;">{{item.prod_price}}</span></div>
+          <div class="item"><img src="{{item.image.url}}" alt="" height="200px"><span class=""
+            style="color: white; font-family: 'Courier New', monospace;">{{item.prod_name}}</span><br><span class="fs-5"
+            style="color: white; font-family: 'Courier New', monospace;">₹{{item.prod_price}}</span></div>
 
 
           {% endfor%}
@@ -155,73 +144,7 @@
       <!-- End 1st Product Slider -->
 
 
-      <!-- Payment Info Section -->
-      <div class="container my-5">
-        <div class="row">
-          <div class="col-sm-3">
-            <div class="card mb-3">
-              <div class="card-body">
-                <img src="{% static 'app/images/payavail/cc.jpg' %}" alt="" srcset="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card mb-3">
-              <div class="card-body">
-                <img src="{% static 'app/images/payavail/upi.jpg' %}" alt="" srcset="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card mb-3">
-              <div class="card-body">
-                <img src="{% static 'app/images/payavail/nb.jpg' %}" alt="" srcset="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3">
-            <div class="card mb-3">
-              <div class="card-body">
-                <img src="{% static 'app/images/payavail/bj.jpg' %}" alt="" srcset="" class="img-fluid">
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Payment Info Section -->
-
-
-      <!-- 2nd Product Slider -->
-      <div class="mx-3">
-        <h2>Trending Deals</h2>
-        <!-- Slider 2 -->
-        <div class="owl-carousel" id="slider2">
-          <div class="item"><img src="{% static 'app/images/product/12.jpg' %}" alt="" height="200px"><span
-              class="fw-bold">Product 1</span><br><span class="fs-5">Rs. 500</span></div>
-          <div class="item"><img src="{% static 'app/images/product/11.jpg' %}" alt="" height="200px"><span
-              class="fw-bold">Product 2</span><br><span class="fs-5">Rs. 300</span></div>
-          <div class="item"><img src="{% static 'app/images/product/10.jpg' %}" alt="" height="200px"><span
-              class="fw-bold">Product 3</span><br><span class="fs-5">Rs. 100</span></div>
-          <div class="item"><img src="{% static 'app/images/product/9.jpg' %}" alt="" height="200px"><span
-              class="fw-bold">Product 4</span><br><span class="fs-5">Rs. 700</span></div>
-          <div class="item"><img src="{% static 'app/images/product/8.jpg' %}" alt="" height="200px"><span
-              class="fw-bold">Product 5</span><br><span class="fs-5">Rs. 500</span></div>
-          <div class="item"><img src="{% static 'app/images/product/11.jpg' %}" alt="" height="200px"><span
-              class="fw-bold">Product 6</span><br><span class="fs-5">Rs. 400</span></div>
-          <div class="item"><img src="{% static 'app/images/product/5.jpg' %}" alt="" height="200px"><span
-              class="fw-bold">Product 7</span><br><span class="fs-5">Rs. 500</span></div>
-          <div class="item"><img src="{% static 'app/images/product/11.jpg' %}" alt="" height="200px"><span
-              class="fw-bold">Product 8</span><br><span class="fs-5">Rs. 300</span></div>
-          <div class="item"><img src="{% static 'app/images/product/12.jpg' %}" alt="" height="200px"><span
-              class="fw-bold">Product 9</span><br><span class="fs-5">Rs. 600</span></div>
-          <div class="item"><img src="{% static 'app/images/product/7.jpg' %}" alt="" height="200px"><span
-              class="fw-bold">Product 10</span><br><span class="fs-5">Rs. 900</span></div>
-          <div class="item"><img src="{% static 'app/images/product/6.jpg' %}" alt="" height="200px"><span
-              class="fw-bold">Product 11</span><br><span class="fs-5">Rs. 100</span></div>
-          <div class="item"><img src="{% static 'app/images/product/10.jpg' %}" alt="" height="200px"><span
-              class="fw-bold">Product 12</span><br><span class="fs-5">Rs. 200</span></div>
-        </div>
-      </div>
+      
       <!-- End 2nd Product Slider -->
       <script type="text/javascript">
         (function(d, m){
