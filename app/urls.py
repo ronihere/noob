@@ -14,4 +14,8 @@ urlpatterns = [
     # path('login/', views.login, name='login'),
     # path('registration/', views.customerregistration, name='customerregistration'),
     path('checkout/', views.checkout, name='checkout'),
+    path('hood/', views.hood, name='hood'),
+    path('glass/', views.glass, name='glass'),
+    path('shoe/', views.shoe, name='shoe'),
+    path('cap/', views.cap, name='cap'),
 ]

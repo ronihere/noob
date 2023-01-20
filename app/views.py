@@ -39,3 +39,16 @@ def customerregistration(request):
 
 def checkout(request):
  return render(request, 'app/checkout.html')
+
+
+def hood(request):
+    return render(request,'app/hood.html')
+
+def glass(request):
+    return render(request,'app/glass.html')
+
+def shoe(request):
+    return render(request,'app/shoe.html')
+
+def cap(request):
+    return render(request,'app/cap.html')
